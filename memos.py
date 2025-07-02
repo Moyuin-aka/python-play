@@ -5,7 +5,7 @@ def get_memos():
     url=input("请输入你的memos域名(例如：memos.xxx.com):")
     try:
         cert_path = certifi.where()
-        response=requests.get(f"https://{url}/api/v1/memos",verify=False)
+        response=requests.get(f"https://{url}/api/v1/memos")
         response.raise_for_status()  # Check for HTTP errors
         data=response.json()
         memos_list=data.get('memos')
