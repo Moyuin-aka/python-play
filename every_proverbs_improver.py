@@ -62,7 +62,7 @@ if __name__ == "__main__":
             while True:
                 if not ask("你还想要么？ (yes/no) "):
                     print("好，今日顺遂!")
-                    break
+                    sys.exit(0)  # 如果用户不想继续，退出程序
                 else:
                     print(get_proverbs())
         else:
